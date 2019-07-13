@@ -1,0 +1,2 @@
+﻿1. ethernet on/off
+2. minimize window of vbox gui when start
