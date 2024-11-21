@@ -36,6 +36,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -45,6 +48,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteSnapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -53,10 +57,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.deleteSnapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -158,6 +158,36 @@
             this.panel1.Size = new System.Drawing.Size(194, 470);
             this.panel1.TabIndex = 1;
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(114, 96);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 26;
+            this.button10.Text = "hide wnd";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.Button10_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(98, 169);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(89, 23);
+            this.button9.TabIndex = 25;
+            this.button9.Text = "ethernet on/off";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.Button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(90, 208);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 24;
+            this.button8.Text = "take snap";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.Button8_Click);
+            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(9, 208);
@@ -205,6 +235,7 @@
             this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(7, 250);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(182, 97);
@@ -235,6 +266,13 @@
             this.restoreToolStripMenuItem.Text = "restore";
             this.restoreToolStripMenuItem.Click += new System.EventHandler(this.RestoreToolStripMenuItem_Click);
             // 
+            // deleteSnapToolStripMenuItem
+            // 
+            this.deleteSnapToolStripMenuItem.Name = "deleteSnapToolStripMenuItem";
+            this.deleteSnapToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.deleteSnapToolStripMenuItem.Text = "delete";
+            this.deleteSnapToolStripMenuItem.Click += new System.EventHandler(this.DeleteSnapToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -259,7 +297,7 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(3, 117);
+            this.checkBox3.Location = new System.Drawing.Point(6, 117);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(109, 17);
             this.checkBox3.TabIndex = 16;
@@ -309,43 +347,6 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(90, 208);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 24;
-            this.button8.Text = "take snap";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.Button8_Click);
-            // 
-            // deleteSnapToolStripMenuItem
-            // 
-            this.deleteSnapToolStripMenuItem.Name = "deleteSnapToolStripMenuItem";
-            this.deleteSnapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.deleteSnapToolStripMenuItem.Text = "delete";
-            this.deleteSnapToolStripMenuItem.Click += new System.EventHandler(this.DeleteSnapToolStripMenuItem_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(98, 169);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(89, 23);
-            this.button9.TabIndex = 25;
-            this.button9.Text = "ethernet on/off";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.Button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(114, 96);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 26;
-            this.button10.Text = "hide wnd";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.Button10_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,6 +355,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.statusStrip1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Virtual Box Client";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

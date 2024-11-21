@@ -119,7 +119,7 @@ namespace vbox
 
             //s.UnlockMachine();
 
-            var ret = mc.LaunchVMProcess(session, "gui", "");
+            var ret = mc.LaunchVMProcess(session, "gui", null);
 
         }
 
